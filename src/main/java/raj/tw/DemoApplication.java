@@ -17,6 +17,18 @@ public class DemoApplication {
 		return "My first App";
 	}
 
+	@RequestMapping(method = RequestMethod.GET, path = "/b")
+	@ResponseBody
+	EnumLearnStrings EnumsReturnStrings(){
+		return EnumLearnStrings.A;
+	}
+
+	@RequestMapping(method = RequestMethod.GET, path = "/c")
+	@ResponseBody
+	EnumLearnNumbers EnumsReturnNumbers(){
+		return EnumLearnNumbers.A;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
